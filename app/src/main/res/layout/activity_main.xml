@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/breadChoice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Please Choose Bread"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="24dp" />
+
+            <RadioGroup
+                android:id="@+id/breads"
+                android:layout_width="283dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="48dp">
+
+                <RadioButton
+                    android:id="@+id/roastedGarlic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickBread"
+                    android:text="Roasted Garlic Bread" />
+
+                <RadioButton
+                    android:id="@+id/italian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickBread"
+                    android:text="Italian Bread" />
+
+                <RadioButton
+                    android:id="@+id/multigrain"
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickBread"
+                    android:text="Multigrain Bread" />
+
+                <RadioButton
+                    android:id="@+id/honeyOats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickBread"
+                    android:text="Multigrain Honey Oats Bread" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/toastChoice"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:text="Cheese and Toasted"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/cheeseAndToastedRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/toastedWithCheese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickToast"
+                    android:text="Toasted Bread With Cheese" />
+
+                <RadioButton
+                    android:id="@+id/toasted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickToast"
+                    android:text="Toasted Bread" />
+
+                <RadioButton
+                    android:id="@+id/plainWithCheese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickToast"
+                    android:text="Plain Bread With Cheese" />
+
+                <RadioButton
+                    android:id="@+id/plain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickToast"
+                    android:text="Plain Bread" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/sauceChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choice Of Sauces"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/mayo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saucesCheckbox"
+                android:text="Mayonnaise" />
+
+            <CheckBox
+                android:id="@+id/mintMayo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saucesCheckbox"
+                android:text="Mint Mayonnaise" />
+
+            <CheckBox
+                android:id="@+id/southwest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saucesCheckbox"
+                android:text="Chipotle SouthWest" />
+
+            <CheckBox
+                android:id="@+id/mustard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saucesCheckbox"
+                android:text="Mustard" />
+
+            <CheckBox
+                android:id="@+id/sweetOnion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saucesCheckbox"
+                android:text="Sweet Onion" />
+
+            <TextView
+                android:id="@+id/vegetableChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choice Of Vegetables"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/lettuce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+                android:text="Lettuce" />
+
+            <CheckBox
+                android:id="@+id/tomato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+
+                android:text="Tomato" />
+
+            <CheckBox
+                android:id="@+id/onions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+
+                android:text="Onions" />
+
+            <CheckBox
+                android:id="@+id/Olives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+
+                android:text="Olives" />
+
+            <CheckBox
+                android:id="@+id/jalapenos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+                android:text="Jalapenos" />
+
+            <CheckBox
+                android:id="@+id/peppers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+                android:text="Bell Peppers" />
+
+            <CheckBox
+                android:id="@+id/cucumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="vegetablesCheckbox"
+                android:text="Cucumber" />
+
+            <TextView
+
+                android:id="@+id/addOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Addon Toppings"
+                android:textSize="24dp" />
+
+            <CheckBox
+                android:id="@+id/saltPepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addCheckbox"
+                android:text="Salt and Pepper" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:onClick="onClickSubmit"
+
+                android:text="PLACE ORDER" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
